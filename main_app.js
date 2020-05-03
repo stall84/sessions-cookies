@@ -2,6 +2,8 @@ const express = require('express');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 
+const PORT = process.env.PORT || 3001;
+
 const app = express();
 
 
@@ -23,8 +25,8 @@ app.use((req,res,next) => {
     }
 });
 
-app.listen(3000, () => {
-    console.log('Listening on 3Grand');
+app.listen(PORT, () => {
+    console.log(`Server UP and LISTENING on PORT: ${PORT}`);
 });
 
 /*
